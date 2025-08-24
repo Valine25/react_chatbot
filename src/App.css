@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: url('C:\Users\intel\Desktop\React\chatbot\public\image.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #f3f3f5;
+}
+
+
+.container h1 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  text-shadow: 0px 8px 16px rgba(251, 249, 249, 0.6);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 1rem;
+}
+
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  outline: none;
+  background-color:rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+
+button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #312ab4;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #5751d1;
+}
+
+
+.output {
+  margin-top: 1.5rem;
+  padding: 2rem 3rem;        
+  border-radius: 30px;       
+  background: rgba(237, 229, 229, 0.471);
+  width: 100%;
+  max-width: 2000px;          
+  min-height: 500px;         
+  max-height: 80vh;          
+  overflow-y: auto;          
+  scrollbar-width: none;     
+  -ms-overflow-style: none;  
+  white-space: pre-wrap;     
+  font-size: 1.25rem;
+  line-height: 1.9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  background-image: linear-gradient(145deg, rgba(10,10,10,0.6), rgba(30,30,30,0.6));
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #f3f3f5;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.output::-webkit-scrollbar {
+  display: none;
+}
+
+.output p {
+  margin-bottom: 1.2rem;
+}
+.output h1, .output h2, .output h3 {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.output strong {
+    font-weight: bold;
+}
+
+.output em {
+    font-style: italic;
+}
+
+.output code {
+    background-color: rgba(255,255,255,0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+.output pre {
+    background-color: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+
+.output ul, .output ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.output li {
+    margin-bottom: 0.6rem;
+}

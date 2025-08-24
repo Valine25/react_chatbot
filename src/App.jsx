@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
-
+import ReactMarkdown from "react-markdown"
+import "./App.css";
 export default function App() {
   const [query, setQuery] = useState("");
-  const [answer, setAnswer] = useState([]);
+  const [answer, setAnswer] = useState("");
   async function generateAnswer() {
     setAnswer("Thinking...");
+
     try {
       const response = await axios({
         url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=your_api_key",
@@ -32,9 +34,13 @@ export default function App() {
   return (
     <div className="container">
       <h1>Chat AI</h1>
-      <textarea value={query} onChange={(e) => setQuery(e.target.value)} />
-      <button onClick={generateAnswer}>Generate Answer</button>
-      <p>{answer}</p>
+      <form action="#">
+        <textarea value={query} onChange={(e) => setQuery(e.target.value)} />
+        <button onClick={generateAnswer}>Generate Answer</button>
+      </form>
+      <div className="output">
+        <ReactMarkdown>{answer}</ReactMarkdown>
+      </div>
     </div>
   );
 }
